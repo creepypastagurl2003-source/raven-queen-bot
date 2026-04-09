@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: raven-queen-bot
+    runtime: node
+    rootDir: raven-queen-bot
+    buildCommand: npm install
+    startCommand: node index.js
+    plan: free
+    envVars:
+      - key: RAVEN_QUEEN_TOKEN
+        sync: false
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: TWITCH_CLIENT_ID
+        sync: false
+      - key: TWITCH_CLIENT_SECRET
+        sync: false
